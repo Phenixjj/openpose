@@ -426,7 +426,6 @@ if (UNIX OR APPLE)
   endif (${GPU_MODE} MATCHES "CUDA")
   find_package(GFlags) # For Caffe and OpenPose
   find_package(Glog) # For Caffe
-  find_package(Protobuf REQUIRED) # For Caffe
 
   if (OpenCV_CONFIG_FILE)
     include (${OpenCV_CONFIG_FILE})
@@ -866,7 +865,7 @@ if (NOT ${WITH_EIGEN} MATCHES "NONE")
 endif (NOT ${WITH_EIGEN} MATCHES "NONE")
 
 if (APPLE)
-  include_directories("/usr/local/opt/openblas/include")
+  include_directories("/opt/homebrew/opt/openblas/include")
 endif (APPLE)
 
 if (USE_MKL)

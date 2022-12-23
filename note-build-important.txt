@@ -1,0 +1,8 @@
+use this for build
+cmake -DCMAKE_CXX_FLAGS=-I/usr/local/opt/openblas/include .. 
+
+caffe modif
+change
+coded_input->SetTotalBytesLimit(kProtoReadBytesLimit, 536870912);
+for
+coded_input->SetTotalBytesLimit(kProtoReadBytesLimit);
